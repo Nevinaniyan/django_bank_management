@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "base.html" %}        <!--  this loads the base.html template to this page  -->
+{% load static %}              <!--always add load static after extends page---->
+{% block title%}
+home
+{% endblock %}
+{% block content %}
+
+
+<table class="table table-bordered" style="">
+
+    {% for i in a %}
+    <tr>
+        <th>Account Number : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.account_number}}</td>
+    </tr>
+    <tr>
+        <th>Account Number : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.account_holder_name}}</td>
+    </tr>
+    <tr>
+        <th>Account Number : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.account_type}}</td>
+    </tr>
+    <tr>
+        <th>Account Number : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.balance}}</td>
+    </tr>
+    <tr>
+        <th>Account Number : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.user}}</td>
+    </tr>
+
+        <a href="{% url 'account:edit' i.id %}" class="btn btn-primary">Update Acccount</a>
+            <a href="{% url 'account:delete' i.id %}" class="btn btn-primary">Delete Acccount</a>
+
+
+
+
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}        <!--  this loads the base.html template to this page  -->
+{% load static %}
+               <!--need to declare here before use crispy forms --->
+{% block title%}
+add1
+{% endblock %}
+
+{% block content %}
+                             <!--creating form through builtin--------------------------------------------->
+
+<h2>Update Account</h2>
+                       <!--{# {{form}} #} is data send from view its an object of class form  ---->
+<form method="POST" enctype="multipart/form-data">
+     <!--here enctype is for media content,uploading type sending , updating and all-->
+
+
+    {% csrf_token %}
+
+     {{form}}
+    <input type="submit">
+</form>
+
+
+ {% endblock %}

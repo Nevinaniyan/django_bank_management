@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends "base.html" %}        <!--  this loads the base.html template to this page  -->
+{% load static %}              <!--always add load static after extends page---->
+{% block title%}
+home
+{% endblock %}
+{% block content %}
+
+<div class="container">
+
+<form method="POST" enctype="multipart/form-data">             <!-- in applic level form add method="POST" to send this form content to server -->
+                   <!--here enctype is for media content,uploading type sending , updating and all-->
+
+ {% csrf_token %}         <!--security feature used to send encrypted data from client side without getting manipulated  -->
+    <div class="mb-3">
+  <label  class="form-label">Account Number</label>
+  <input type="number" class="form-control" name="an"  placeholder="Enter Title">
+</div>                   <!--for each input type add name="t" used to retrieve value   -->
+
+    <div class="mb-3">
+  <label  class="form-label">Account Holder Name</label>
+  <input type="text" class="form-control" name="hn"  placeholder="Enter Author">
+</div>                                 <!--for each input type add name="t" used to retrieve value   -->
+
+    <div class="mb-3">
+  <label class="form-label">Account Type</label>
+  <input type="text" class="form-control" name="at"  placeholder="Enter Price">
+</div>                       <!--for each input type add name="t" used to retrieve value   -->
+
+    <div class="mb-3">
+  <label class="form-label">Balance</label>
+  <input type="number" class="form-control" name="b"  placeholder="Enter Price">
+</div>
+
+<!-- <div class="mb-3">-->
+<!--  <label class="form-label">Cover</label>-->
+<!--  <input type="file" class="form-control" name="cv" >-->
+<!--</div>-->
+
+<!--     <div class="mb-3">-->
+<!--  <label class="form-label">Pdf</label>-->
+<!--  <input type="file" class="form-control" name="pd"  >-->
+<!--</div>-->
+
+
+       <div class="mb-3">
+    <center>
+    <input type="submit"  class="btn btn-danger"></center>
+    </div>
+
+ </form>
+
+{% endblock %}

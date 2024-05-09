@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base.html" %}        <!--  this loads the base.html template to this page  -->
+{% load static %}              <!--always add load static after extends page---->
+{% block title%}
+home
+{% endblock %}
+{% block content %}
+
+
+<table class="table table-bordered" style="">
+
+    {% for i in t %}
+    <tr>
+        <th>Account Number : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.account.account_number}}</td>
+    </tr>
+
+     <tr>
+        <th>Customer Name : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.account.account_holder_name}}</td>
+    </tr>
+     <tr>
+        <th>Amount : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.amount}}</td>
+    </tr>
+     <tr>
+        <th>Balance : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.account.balance}}</td>
+    </tr>
+    <tr>
+        <th>Date : </th>                   <!-- here id is passed as context in jinja2 form (b) then that b is taken to show value b.name  -->
+        <td>{{i.date}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
+
