@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+add1
+{% endblock %}
+
+{% block content %}
+<style>
+    /* Content */
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+</style>
+
+<h2>Update Account</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

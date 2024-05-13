@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+home
+{% endblock %}
+{% block content %}
+<style>
+    /* Content */
+    h1,
+    h3 {
+        text-align: center;
+        color: #333;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<br>
+<div class="container">
+    <br>
+    <center>
+        {% if user.is_authenticated %}
+        <h1>Welcome <span style="color: red;">{{user.username}}</span></h1>
+        {% else %}
+        <h1>Welcome</h1>
+        {% endif %}
+        <br> <br>
+        <img src="{% static 'image/What-is-Consumer-Banking.jpg' %}" alt="CBT Image" height="500px" width="100%">
+    </center>
+
+    <br> <br>
+    <h3>About Us</h3>
+    <br>
+    <p>
+        CBT Chain-Bank of Trading (CBT) is a pioneering financial institution dedicated to leveraging blockchain technology in trading solutions. Established in 2020, CBT has spearheaded innovation in the finance sector, offering secure and transparent trading services to clients worldwide. With a commitment to revolutionizing the trading landscape, CBT aims to provide access to diverse markets while upholding the highest standards of integrity, innovation, and customer satisfaction.
+    </p>
+</div>
+{% endblock %}

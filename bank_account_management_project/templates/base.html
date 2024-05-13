@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>{% block title%}base{% endblock %}</title>        <!--here block title is used to get differnt title in different pages,this just declared here and content is declared inside other template using this syntax-->
+
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        a
+        {
+        color:red;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--                                 using template inheritance                                                   -->
+<div class="container-fluid">
+
+
+    <nav class="navbar navbar-expand-lg navbar-danger bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CBT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="position:relative;">
+
+              <!--    links added here -->              <!-- links added into nav links  -->
+            <li class="nav-item">
+              <a class="nav-link active ps-5" aria-current="page" href="{% url 'account:home' %}">Home</a>
+            </li>
+
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+              <a class="nav-link ps-5" href="{% url 'account:create' %}">Create Account</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link ps-5" href="{% url 'account:viewtransaction' %}">View Transactions</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link ps-5" href="{% url 'account:update' %}">Update Account</a>
+            </li>
+    <!--         <li class="nav-item">-->
+    <!--          <a class="nav-link ps-5" href="">Delete Account</a>-->
+    <!--        </li>-->
+            <li class="nav-item">
+              <a class="nav-link ps-5 " href="{% url 'account:user_logout' %}">Logout</a>
+            </li>
+
+              {% else %}
+              <li class="nav-item">
+              <a class="nav-link ps-5" href="{% url 'account:register' %}">Register</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link ps-5" href="{% url 'account:login' %}">Login</a>
+            </li>
+              {% endif %}
+
+            <li class="nav-item dropdown" style="margin-left:25px">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">About</a></li>
+                <li><a class="dropdown-item" href="#">Vision</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Branches</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    {%block content %}       <!-- just declared here used to add different content in different pages-->
+    {%endblock%}
+</div>
+    <br> <br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About CBT</h5>
+                    <p>Chain-Bank of Trading (CBT) is committed to providing reliable banking services with a focus on customer satisfaction and financial stability.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Address: Bank Street 123 Mumbai<br>
+                       Phone: 9823467894<br>
+                       Email: infonet@cbtbank.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "base.html" %}        <!--  this loads the base.html template to this page  -->
+{% load static %}              <!--always add load static after extends page---->
+{% block title%}
+update
+{% endblock %}
+
+{% block content %}
+
+<table class="table table-bordered" style="margin-bottom:245px;">
+    <tr>
+        <th>Account Number</th>
+        <th>Account Holder Name</th>
+        <th>Account Type</th>
+        <th>Account Balance</th>
+        <th>User</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for i in a %}
+    <tr>
+        <td>{{ i.account_number }}</td>
+        <td>{{ i.account_holder_name }}</td>
+        <td>{{ i.account_type }}</td>
+        <td>{{ i.balance }}</td>
+        <td>{{ i.user }}</td>
+        <td>
+            <a href="{% url 'account:edit' i.id %}" class="btn btn-primary">Update Account</a>
+            <a href="{% url 'account:delete' i.id %}" class="btn btn-danger">Delete Account</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+

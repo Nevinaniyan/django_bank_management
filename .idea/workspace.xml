@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8f829b0a-9e7f-4ce4-a34c-9fa9dd385ef3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/demoproject2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/account/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/bank_account_management/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/bank_account_management/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/bank_account_management/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/bank_account_management/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/bank_account_management/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/static/image/bank3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/update2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_account_management/templates/viewtransaction.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2gQ2GSwVzkaraFY6Y7ff05pZ2fN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/pycharm-stuffs/Project Django and Rest/django_crud"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f829b0a-9e7f-4ce4-a34c-9fa9dd385ef3" name="Changes" comment="" />
+      <created>1715615384892</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715615384892</updated>
+    </task>
+    <servers />
+  </component>
+</project>
